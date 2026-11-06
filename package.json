@@ -1,0 +1,38 @@
+{
+  "name": "prasaranam",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Prasaranam - AI-Powered Project Knowledge-Handover Web App",
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev:server": "npm --workspace=@prasaranam/server run dev",
+    "dev:client": "npm --workspace=@prasaranam/client run dev",
+    "dev": "npm --workspace=@prasaranam/server run dev",
+    "build": "npm --workspace=@prasaranam/shared run build && npm --workspace=@prasaranam/server run build && npm --workspace=@prasaranam/client run build",
+    "test:server": "npm --workspace=@prasaranam/server run test",
+    "test:client": "npm --workspace=@prasaranam/client run test",
+    "test:e2e": "playwright test",
+    "test": "npm run test:server && npm run test:client",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.50.1",
+    "eslint": "^10.14.0",
+    "typescript-eslint": "^8.72.1"
+  },
+  "keywords": [
+    "knowledge-handover",
+    "prasaranam",
+    "gemini",
+    "supabase"
+  ],
+  "author": "Prasaranam Team",
+  "license": "MIT"
+}
